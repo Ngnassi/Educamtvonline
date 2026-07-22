@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-35%); }
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-flex {
+  display: flex !important;
+  flex-direction: row !important;
+  white-space: nowrap !important;
+  animation: marquee-scroll 45s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
